@@ -1,0 +1,12 @@
+body {
+  width: 900px;
+  padding: 50px;
+  font-family: sans-serif, arial;
+
+}
+.title {
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}

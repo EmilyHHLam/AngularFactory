@@ -10,9 +10,9 @@ myApp.controller('OutputController', ['$scope', 'MovieListFactory',  function($s
 
 myApp.factory('MovieListFactory', [function() {
 
-//add them from input
+//set the movieSet array
   var movieSet = [];
-
+//grab all the information and set it as the thisMovie array
   var addMovieData = function(data) {
     var thisMovie = {
       name: data.name,
@@ -22,7 +22,6 @@ myApp.factory('MovieListFactory', [function() {
     };
     movieSet.push(thisMovie);
   };
-
   return {
     movieSet: movieSet,
     addMovieData: addMovieData
