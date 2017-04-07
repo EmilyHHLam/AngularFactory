@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Factory Project</title>
+
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <script type="text/javascript" src="vendors/angular/angular.min.js"></script>
+    <script type="text/javascript" src="scripts/client.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <h2>Movie Storage</h2><hr />
+      <div class="row card">
+          <div class="col-md-4 card-block" >
+            <form class="inputForm" ng-controller="InputController" ng-submit="addMovieData(movie)">
+              <div class="form-group">
+                <label>Movie:</label><br /><input type="text" ng-model="movie.name" placeholder="name"/>
+              </div><br />
+               <div class="form-group">
+                <label>Description</label><br /><input type="text" ng-model="movie.desc" />
+              </div>
+              <div class="form-group">
+                <b>Director</b><br /><input type="text" ng-model="movie.director" />
+              </div>
+              <div class="form-group">
+                <b>Duration</b><br /><input type="text" ng-model="movie.duration" />
+              </div>
+              <div>
+                <input id="submit" type="submit" class="btn btn-primary">
+              </div>
+            </form>
+          </div>
+          <div class="col-md-8" ng-controller="OutputController" >
+            <h2>Movie List:</h2>
+             <div class="row" ng-repeat="movie in movieSet">
+             <b>  {{movie.name}} </b>
+              {{movie.desc}}
+              {{movie.director}}
+              {{movie.duration}}
+             </div>
+          </div>
+    </div>
+
+    <!-- <div ng-controller="row InputData">
+
+    </div> -->
+  </div>
+  </body>
+</html>
